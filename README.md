@@ -314,48 +314,6 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 |Recovery| 0|
 
 
-|Skill         | Super Saiyan |
-|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-|Description       | Increases the strength of the character for a certain duration|
-|Super Saiyan State | Double attack strength 									
-|Duration| 20 ticks|
-|Startup| 0|
-|Cooldown| 40|
-|Damage| N/A|
-|Horizontal Range| N/A|
-|Vertical Range| N/A|
-|Blockable| N/A|
-|Knockback| N/A|
-|Stun| N/A|
-|Recovery| 0|
-
-|Skill		| Super Armour|
-|---------------|-------------------|
-|Description    |Player gains armour which makes players take less damage and makes player invulnerable to stun and knockback.|
-|Duration| 20 ticks|
-|Startup| 0|
-|Cooldown| 40|
-|Damage| N/A|
-|Horizontal Range| N/A|
-|Vertical Range| N/A|
-|Blockable| N/A|
-|Knockback| N/A|
-|Stun| N/A|
-|Recovery| 0|
-
-|Skill | Super Jump|
-|------|-----------|
-|Description | Allows Player to jump higher|
-|Duration| 20 ticks|
-|Startup | 0|
-|Cooldown | 30|
-|Damage | N/A|
-|Horizontal Range | N/A|
-|Vertical Range | N/A|
-|Blockable | N/A|
-|Knockback | N/A|
-|Stun | N/A|
-|Recovery| 0|
 
 |Skill | Meditate |
 |------|----------|
@@ -479,6 +437,49 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 |Knockback| 0|
 |Stun| 3|
 |Time-to-live| 10|
+
+|Skill         | Super Saiyan |
+|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+|Description       | Increases the strength of the character for a certain duration|
+|Super Saiyan State | Double attack strength 									
+|Duration| 20 ticks|
+|Startup| 0|
+|Cooldown| 40|
+|Damage| N/A|
+|Horizontal Range| N/A|
+|Vertical Range| N/A|
+|Blockable| N/A|
+|Knockback| N/A|
+|Stun| N/A|
+|Recovery| 0|
+
+|Skill		| Super Armour|
+|---------------|-------------------|
+|Description    |Player gains armour which makes players take less damage and makes player invulnerable to stun and knockback.|
+|Duration| 20 ticks|
+|Startup| 0|
+|Cooldown| 40|
+|Damage| N/A|
+|Horizontal Range| N/A|
+|Vertical Range| N/A|
+|Blockable| N/A|
+|Knockback| N/A|
+|Stun| N/A|
+|Recovery| 0|
+
+|Skill | Super Jump|
+|------|-----------|
+|Description | Allows Player to jump higher|
+|Duration| 20 ticks|
+|Startup | 0|
+|Cooldown | 30|
+|Damage | N/A|
+|Horizontal Range | N/A|
+|Vertical Range | N/A|
+|Blockable | N/A|
+|Knockback | N/A|
+|Stun | N/A|
+|Recovery| 0|
 
 
 
