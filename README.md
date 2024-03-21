@@ -38,22 +38,25 @@ The codebase for hackiethon 2024
 #### Hp:
 Each player has 100 hp which does not regenerate unless a player has the “meditate” skill,
 
-##### Tick system
-Actions are taken in intervals called "ticks" or turns. During each tick, players have the opportunity to perform actions unless they are incapacitated by being stunned. Unlike traditional fighting games, there is no initial delay before actions can be taken. However, certain moves may have a built-in cooldown for balance purposes.
+#### Tick system
+Actions are taken in intervals called "ticks" or turns. During each tick, players have the opportunity to perform actions unless they are incapacitated by being stunned. 
+Unlike traditional fighting games, there is no initial delay before actions can be taken. 
+However, certain moves may have a built-in cooldown for balance purposes.
 
-##### Time limit 
+#### Time limit 
 The time limit is 60 seconds with each player having 120 ticks per game
 
 ## Basic Mechanic
 
 ### Movements
 These actions are common for all characters
-	All movements have priority, meaning that characters will always move first before an attack can land
-	Jump : moves the character up by 2 X-positions, then back to the original position, taking 4 ticks in total
-	Jump forward : moves the character up by 1 X-position and 1 Y-position, moving in an arc and landing 3 X-positions forward on the ground, taking 3 ticks total
-	Jump backwards: similar to jump forward, but backwards
-	Move forward/back : moves character forward or back by 1 X-Position, takes 1 tick
-####### Constants defined in code
+	- All movements have priority, meaning that characters will always move first before an attack can land
+	- Jump : moves the character up by 2 X-positions, then back to the original position, taking 4 ticks in total
+	- Jump forward : moves the character up by 1 X-position and 1 Y-position, moving in an arc and landing 3 X-positions forward on the ground, taking 3 ticks total
+	- Jump backwards: similar to jump forward, but backwards
+	- Move forward/back : moves character forward or back by 1 X-Position, takes 1 tick
+ 
+#### Constants defined in code
  ```
 JUMP = ("move", (0,1))
 FORWARD = ("move", (1,0))
@@ -62,10 +65,12 @@ JUMP_FORWARD = ("move", (1,1))
 JUMP_BACKWARD = ("move", (-1, 1))
 ```
 Example:
-return BACK
+> return BACK
 
-Attack
+## Attack
+
 Light attack - Short range (1 X-pos) attack that does small damage with neither knockback nor stun
+```
 Startup: 0
 Cooldown: 1
 Damage: 1
@@ -86,7 +91,12 @@ startup: int,
    knockback: int,
    stun: int
 )
+
+
 0, 1, 5, 1, 0, True, 0, 1
+```
+
+
 Heavy attack - Short range (1 X-pos) attack that does medium damage with some knockback and stun
 Startup: 0
 Cooldown: 1
