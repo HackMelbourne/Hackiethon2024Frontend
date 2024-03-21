@@ -160,29 +160,29 @@ There are 4 parameters available for the player to use.
 These functions can be accessed from ScriptingHelp/usefulFunctions.py
 |Function | Description|
 |---------|------------|
-|def get_hp(player)			Gets player HP
-|def get_distance(player, enemy)	Gets the distance in x-coord between player and enemy
-|def get_pos(player)			Gets position (x,y) of player
-|def get_last_move(player)		Gets the most recent move from player		
-|def get_stun_duration(player)		Gets the current stun duration for a player
-|def get_block_status(player)		If the player is currently blocking, get the current shield HP, else return 0
-|def get_proj_pos(proj)			Gets the position (x,y) of a projectile
-|def primary_on_cooldown(player)	Checks if the player's primary skill is on cooldown
-|def secondary_on_cooldown(player)	Checks if the player's secondary skill is on cooldown
-|def heavy_on_cooldown(player)		Checks if the player's heavy attack is on cooldown
-|def prim_range(player)			Gets the range of a player's primary skill, if it is a damaging skill, else return 0
-|def seco_range(player)			Gets the range of a player's secondary skill, if it is a projectile skill, else return 0
-|def get_past_move(player, turns)	Gets the player's past move {turns} turns ago
-|def get_recovery(player)		Gets the player's current recovery duration
-|def skill_cancellable(player)		Checks if the player can cancel their current skill
-|def get_primary_skill(player)		Gets the name of the player's primary skill
-|def get_secondary_skill(player)	Gets the name of the player's secondary skill
-|def get_projectile_type(proj)		Gets the name of the projectile
-|def get_primary_cooldown(player)	Gets the cooldown duration of a player's primary skill
-|def get_secondary_cooldown(player)	Gets the cooldown duration of a player's primary skill
+|def get_hp(player)			|Gets player HP
+|def get_distance(player, enemy)	|Gets the distance in x-coord between player and enemy
+|def get_pos(player)			|Gets position (x,y) of player
+|def get_last_move(player)		|Gets the most recent move from player		
+|def get_stun_duration(player)		|Gets the current stun duration for a player
+|def get_block_status(player)		|If the player is currently blocking, get the current shield HP, else return 0
+|def get_proj_pos(proj)			|Gets the position (x,y) of a projectile
+|def primary_on_cooldown(player)	|Checks if the player's primary skill is on cooldown
+|def secondary_on_cooldown(player)	|Checks if the player's secondary skill is on cooldown
+|def heavy_on_cooldown(player)		|Checks if the player's heavy attack is on cooldown
+|def prim_range(player)			|Gets the range of a player's primary skill, if it is a damaging skill, else return 0
+|def seco_range(player)			|Gets the range of a player's secondary skill, if it is a projectile skill, else return 0
+|def get_past_move(player, turns)	|Gets the player's past move {turns} turns ago
+|def get_recovery(player)		|Gets the player's current recovery duration
+|def skill_cancellable(player)		|Checks if the player can cancel their current skill
+|def get_primary_skill(player)		|Gets the name of the player's primary skill
+|def get_secondary_skill(player)	|Gets the name of the player's secondary skill
+|def get_projectile_type(proj)		|Gets the name of the projectile
+|def get_primary_cooldown(player)	|Gets the cooldown duration of a player's primary skill
+|def get_secondary_cooldown(player)	|Gets the cooldown duration of a player's primary skill
 
 >[!NOTE]
-> Call the funtion like this: get_pos(player) or get_pos(enemy)
+> Call the function like this: get_pos(player) or get_pos(enemy)
 
 
 
