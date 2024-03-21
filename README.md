@@ -300,51 +300,53 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 
 |Skill         | Teleport |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-|Description       | Instantly moves the character a certain distance (5 units) away from the enemy|
+|Description       | Instantly moves the character a certain distance (6 units) away from the enemy|
 |Startup | 0|														    
-|Cooldown           | 10|
-|Damage | 10|
+|Cooldown           | 6|
 |Horizontal Range| 10|
 |Vertical Range| 0|
-|Blockable| False|
-|Knockback| 2|
-|Stun| 2|
-
+|Damage| N/A|
+|Horizontal Range| N/A|
+|Vertical Range| N/A|
+|Blockable| N/A|
+|Knockback| N/A|
+|Stun| N/A|
+|Recovery| 0|
 
 
 |Skill         | Super Saiyan |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-|Description       | Increases the speed of the character, make their attacks deal more damage but slows them down after the buff ends for a certain period of time|
-|Super Saiyan State | Double attack strength 															    |
-|Duration           | 5 ticks																	    |
-|Slowed-down state | Half attack strength, All attacks now have 1 tick startup |
-|Duration| 5 ticks|
+|Description       | Increases the strength of the character for a certain duration|
+|Super Saiyan State | Double attack strength 									
+|Duration| 20 ticks|
 |Startup| 0|
-|Cooldown| 15|
+|Cooldown| 40|
 |Damage| N/A|
 |Horizontal Range| N/A|
 |Vertical Range| N/A|
 |Blockable| N/A|
 |Knockback| N/A|
 |Stun| N/A|
-
+|Recovery| 0|
 
 |Skill		| Super Armour|
 |---------------|-------------------|
-|Description    |Player gains armour which makes players take less damage and makes player invulnerable to stun.|
+|Description    |Player gains armour which makes players take less damage and makes player invulnerable to stun and knockback.|
+|Duration| 20 ticks|
 |Startup| 0|
-|Cooldown| 30|
+|Cooldown| 40|
 |Damage| N/A|
 |Horizontal Range| N/A|
 |Vertical Range| N/A|
 |Blockable| N/A|
 |Knockback| N/A|
 |Stun| N/A|
-
+|Recovery| 0|
 
 |Skill | Super Jump|
 |------|-----------|
 |Description | Allows Player to jump higher|
+|Duration| 20 ticks|
 |Startup | 0|
 |Cooldown | 30|
 |Damage | N/A|
@@ -353,11 +355,11 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 |Blockable | N/A|
 |Knockback | N/A|
 |Stun | N/A|
-
+|Recovery| 0|
 
 |Skill | Meditate |
 |------|----------|
-|Description |Heals character for 10 HP.|
+|Description |Heals character for 20 HP.|
 |Startup | 0|
 |Cooldown | 20|
 |Damage | N/A|
@@ -366,7 +368,7 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 |Blockable | N/A|
 |Knockback | N/A|
 |Stun | N/A|
-
+|Recovery| 0|
 
 
 ### Damaging abilities
@@ -374,34 +376,34 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 |Skill| Dash Attack|
 |------|-----------|
 |Description|Instantly moves the character a certain distance in the direction towards the enemy, dealing medium damage if the dash hits the enemy|
-|Startup| 0|
-|Cooldown| 10|
-|Damage| 10|
-|Horizontal Range| 4|
+|Startup| 1|
+|Cooldown| 7|
+|Damage| 5|
+|Horizontal Range| 5|
 |Vertical Range| 0|
 |Blockable| False|
-|Knockback| 0|
-|Stun| 2|
-
+|Knockback| 1|
+|Stun| 0|
+|Recovery| 0|
 
 |Skill | Uppercut|
 |------|--------|
 |Description |Medium damage attack that hits airborne enemies|
 |Startup| 0 |
-|Cooldown| 10|
-|Damage| 15|
+|Cooldown| 5|
+|Damage| 7|
 |Horizontal Range| 1|
-|Vertical Range| 2|
+|Vertical Range| 1|
 |Blockable| True|
 |Knockback| 2|
 |Stun| 2|
-
+|Recovery| 0|
 
 
 |Skill | One Punch|
 |------|----------|
-|Description| Slow, heavy damage attack that breaks shields with great knockback and stun|
-|Startup| 0|
+|Description| Slow, significant damage attack that breaks shields with great knockback and stun|
+|Startup| 1|
 |Cooldown| 10|
 |Damage| 20|
 |Horizontal Range| 1|
@@ -409,6 +411,7 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 |Blockable| False|
 |Knockback| 4|
 |Stun| 3|
+|Recovery| 2|
 
 
 
@@ -419,11 +422,11 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 
 |Skill | Hadoken|
 |------|--------|
-|Description| Basic projectile that does damage if it hits an enemy along its path|
+|Description| Basic projectile that does medium damage if it hits an enemy along its path|
 |Startup| 0|
 |Cooldown| 10|
 |Damage| 10|
-|Travel Range| 5|
+|Travel Range| 7|
 |Vertical Range| 0|
 |Blockable| True|
 |Knockback| 2|
@@ -433,10 +436,10 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 
 |Skill | Boomerang|
 |------|----------|
-|Description|Travels forwards, then back towards the character who casted it, dealing weak damage to the enemy upon being hit|
+|Description|Travels forwards, then back towards the character who casted it, dealing medium damage to the enemy upon being hit|
 |Startup| 0|
-|Cooldown| 10|
-|Damage| 5|
+|Cooldown| 14|
+|Damage| 8|
 |Travel Range| 5|
 |Vertical Range| 0|
 |Blockable| True|
@@ -446,14 +449,14 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 
 |Skill | Grenade|
 |------|--------|
-|Description |Initially travels upwards in an arc, exploding and dealing damage at the end of the arc|
+|Description |Initially travels upwards and forwards in an arc, exploding and dealing damage at the end of the arc|
 |Travel path| 3 x-coord and 1 y-coord from cast position|
 |Damage | Explodes after 3 ticks and damages in an 3x3 area|
 |Startup| 0|
-|Cooldown| 10|
-|Damage| 10|
-|Travel Range| 5|
-|Vertical Range| 0|
+|Cooldown| 12|
+|Damage| 20|
+|Travel Range| 3 |
+|Vertical Range| 1|
 |Blockable| False|
 |Knockback| 3|
 |Stun| 3|
@@ -465,17 +468,17 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 
 |Skill | Bear Trap|
 |------|----------|
-|Description| Travels forward a short distance and stays at that position, deals damage to the enemy if they step on it after it travels (2 ticks of travel)|
+|Description| Travels forward a short distance and stays at that position, deals damage to the enemy if they step on it after it travels (1 tick of travel)|
 |Travel range| 2 x-coords from cast position|
 |Startup| 0|
-|Cooldown| 10|
+|Cooldown| 15|
 |Damage| 10|
-|Travel Range| 5|
+|Travel Range| 1|
 |Vertical Range| 0|
 |Blockable| False|
 |Knockback| 0|
 |Stun| 3|
-|Time-to-live| 5|
+|Time-to-live| 10|
 
 
 
