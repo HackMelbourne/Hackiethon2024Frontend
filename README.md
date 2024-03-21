@@ -83,15 +83,13 @@ Stun: 2
 
 
 startup: int,
-   cooldown: int,
-   damage: int,
-   xRange: int,
-   vertical: int,
-   blockable: bool,
-   knockback: int,
-   stun: int
-)
-
+cooldown: int,
+damage: int,
+xRange: int,
+vertical: int,
+blockable: bool,
+knockback: int,
+stun: int
 
 0, 1, 5, 1, 0, True, 0, 1
 ```
