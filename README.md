@@ -155,25 +155,26 @@ There are 4 parameters available for the player to use.
 
 
 # Character information functions:
-```
-    player.get_hp()
-def get_pos(self)  - Character position in (x,y) form
-def get_proj_pos(proj) - get projectile’s pos in (x,y) form
-def get_hp(self) - Character HP
-def get_blocking(self) - check Blocking, if blocking, return shield HP
-def primary_on_cooldown(player) - Check Primary skill cooldown
-def secondary_on_cd(self) - Check Secondary skill cooldown
-def heavy_on_cd(self) - Check heavy attack cooldown
-def primary_range(self) - Primary skill range
-def secondary_range(self) - Secondary skill range
-def get_last_move(self) - last move
-def get_past_move(self, turns) -  get nth move
-def get_stun(self) - check character stun
-def get_recovery(self) - Current recovery status
-def skill_cancellable(self) - check if current skill can be cancelled
 
-```
+|Function | Description|
+|---------|------------|
+|def get_pos(self)  | Character position in (x,y) form
+|def get_proj_pos(proj) | get projectile’s pos in (x,y) form
+|def get_hp(self) | Character HP
+|def get_blocking(self) | check Blocking, if blocking, return shield HP
+|def primary_on_cooldown(player) | Check Primary skill cooldown
+|def secondary_on_cd(self) | Check Secondary skill cooldown
+|def heavy_on_cd(self) | Check heavy attack cooldown
+|def primary_range(self) | Primary skill range
+|def secondary_range(self) | Secondary skill range
+|def get_last_move(self) | last move
+|def get_past_move(self, turns) | get nth move
+|def get_stun(self) | check character stun
+|def get_recovery(self) | Current recovery status
+|def skill_cancellable(self) | check if current skill can be cancelled
 
+>[!NOTE]
+> Call the funtion like this: player.get_pos()
 
 
 
