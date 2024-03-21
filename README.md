@@ -19,17 +19,12 @@ The codebase for hackiethon 2024
 	- Run the .exe file
 
 
-
-
-
-
-
 # Introduction:
 ### The tournament will follow a bracket-style format where teams control characters using ai who will engage in one-on-one battles.
 
 
 
-#Winning Conditions:
+## Winning Conditions:
 	- There are three ways to win a match:
 	- Knockout: Defeat the opponent by reducing their character's health to zero.
 	- Time Limit: If the match reaches the time limit, the player with more remaining health wins.
@@ -40,32 +35,32 @@ The codebase for hackiethon 2024
 
 
 ## Game mechanics:
-Hp:
+#### Hp:
 Each player has 100 hp which does not regenerate unless a player has the “meditate” skill,
 
-Tick system
+##### Tick system
 Actions are taken in intervals called "ticks" or turns. During each tick, players have the opportunity to perform actions unless they are incapacitated by being stunned. Unlike traditional fighting games, there is no initial delay before actions can be taken. However, certain moves may have a built-in cooldown for balance purposes.
 
-Time limit 
+##### Time limit 
 The time limit is 60 seconds with each player having 120 ticks per game
 
-Basic Mechanic
+## Basic Mechanic
 
-Movements
+### Movements
 These actions are common for all characters
-Movement 
-All movements have priority, meaning that characters will always move first before an attack can land
-Jump : moves the character up by 2 X-positions, then back to the original position, taking 4 ticks in total
-Jump forward : moves the character up by 1 X-position and 1 Y-position, moving in an arc and landing 3 X-positions forward on the ground, taking 3 ticks total
-Jump backwards: similar to jump forward, but backwards
-Move forward/back : moves character forward or back by 1 X-Position, takes 1 tick
-	Constants defined in code
+	All movements have priority, meaning that characters will always move first before an attack can land
+	Jump : moves the character up by 2 X-positions, then back to the original position, taking 4 ticks in total
+	Jump forward : moves the character up by 1 X-position and 1 Y-position, moving in an arc and landing 3 X-positions forward on the ground, taking 3 ticks total
+	Jump backwards: similar to jump forward, but backwards
+	Move forward/back : moves character forward or back by 1 X-Position, takes 1 tick
+####### Constants defined in code
+ ```
 JUMP = ("move", (0,1))
 FORWARD = ("move", (1,0))
 BACK = ("move", (-1,0))
 JUMP_FORWARD = ("move", (1,1))
 JUMP_BACKWARD = ("move", (-1, 1))
-
+```
 Example:
 return BACK
 
