@@ -1,20 +1,20 @@
 # Hackiethon_2024_participant
 The codebase for hackiethon 2024
 
-#TLDR - Make a bot in 3 minutes:
+# TLDR - Make a bot in 3 minutes:
 	- Go to Submissions and create a new bot
  	- Get code from template.py and paste it into the new file (in our case newbot.py)
 	- Select PRIMARY_SKILL and SECONDARY_SKILL (see skills in documentation below)
 	- Edit get_move() function
 
 
-###Setup Frontend (MacOS):
+### Setup Frontend (MacOS):
 	- Download folder
 	- Open XCode Project (Update XCode if necessary)
 	- In Resources/Data/StreamingAssets/Round_1, update the p1.json, p2.json and round.json files
 	- Run game
 
-###Setup Frontend (Windows):
+### Setup Frontend (Windows):
 	- In Resources/Data/StreamingAssets/Round_1, update the p1.json, p2.json and round.json files
 	- Run the .exe file
 
@@ -24,8 +24,8 @@ The codebase for hackiethon 2024
 
 
 
-#Introduction:
-###The tournament will follow a bracket-style format where teams control characters using ai who will engage in one-on-one battles.
+# Introduction:
+### The tournament will follow a bracket-style format where teams control characters using ai who will engage in one-on-one battles.
 
 
 
