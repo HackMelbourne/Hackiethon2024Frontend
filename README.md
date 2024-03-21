@@ -182,7 +182,9 @@ These functions can be accessed from ScriptingHelp/usefulFunctions.py
 |def get_secondary_cooldown(player)	|Gets the cooldown duration of a player's primary skill
 
 >[!NOTE]
-> Call the function like this: get_pos(player) or get_pos(enemy)
+> Call the function like this: get_hp(player) or get_hp(enemy)
+>Example: if get_hp(enemy) < 30:
+>		return FORWARD
 
 
 
