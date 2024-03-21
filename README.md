@@ -1,38 +1,45 @@
 # Hackiethon_2024_participant
 The codebase for hackiethon 2024
 
-TLDR - Make a bot in 3 minutes:
-Go to Submissions and create a new bot
-
-Get code from template.py and paste it into the new file (in our case newbot.py)
-
-Select PRIMARY_SKILL and SECONDARY_SKILL (see skills in documentation below)
-Edit get_move() function
+#TLDR - Make a bot in 3 minutes:
+	- Go to Submissions and create a new bot
+ 	- Get code from template.py and paste it into the new file (in our case newbot.py)
+	- Select PRIMARY_SKILL and SECONDARY_SKILL (see skills in documentation below)
+	- Edit get_move() function
 
 
-Setup Frontend (MacOS):
-Download folder
-Open XCode Project (Update XCode if necessary)
-In Resources/Data/StreamingAssets/Round_1, update the p1.json, p2.json and round.json files
-Run game
+###Setup Frontend (MacOS):
+	- Download folder
+	- Open XCode Project (Update XCode if necessary)
+	- In Resources/Data/StreamingAssets/Round_1, update the p1.json, p2.json and round.json files
+	- Run game
 
-Setup Frontend (Windows):
-In Resources/Data/StreamingAssets/Round_1, update the p1.json, p2.json and round.json files
-Run the .exe file
-
-Introduction:
-The tournament will follow a bracket-style format where teams control characters using ai who will engage in one-on-one battles.
+###Setup Frontend (Windows):
+	- In Resources/Data/StreamingAssets/Round_1, update the p1.json, p2.json and round.json files
+	- Run the .exe file
 
 
 
-Winning Conditions:
 
-There are three ways to win a match:
-Knockout: Defeat the opponent by reducing their character's health to zero.
-Time Limit: If the match reaches the time limit, the player with more remaining health wins.
-Coin Flip: If both players have the same amount of health when the time runs out, the winner will be determined by a coin flip.
 
-Game mechanics:
+
+
+#Introduction:
+###The tournament will follow a bracket-style format where teams control characters using ai who will engage in one-on-one battles.
+
+
+
+#Winning Conditions:
+	- There are three ways to win a match:
+	- Knockout: Defeat the opponent by reducing their character's health to zero.
+	- Time Limit: If the match reaches the time limit, the player with more remaining health wins.
+	- Coin Flip: If both players have the same amount of health when the time runs out, the winner will be determined by a coin flip.
+
+
+
+
+
+## Game mechanics:
 Hp:
 Each player has 100 hp which does not regenerate unless a player has the “meditate” skill,
 
