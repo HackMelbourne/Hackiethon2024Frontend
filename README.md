@@ -48,7 +48,7 @@ Documentation for Hackiethon 2024
 Each player has 100 hp which does not regenerate unless a player has the “meditate” skill,
 
 #### Tick system
-Actions are taken in intervals called "ticks" or turns. During each tick, players have the opportunity to perform actions unless they are incapacitated by being stunned. 
+Actions are taken in intervals called "ticks" or turns. During each tick, players have the opportunity to perform actions unless they are incapacitated by being stunned.
 Unlike traditional fighting games, there is no initial delay before actions can be taken. 
 However, certain moves may have a built-in cooldown for balance purposes.
 
@@ -58,10 +58,11 @@ The time limit is 60 seconds with each player having 120 ticks per game
 ## Basic Mechanic
 
 ### Movements
-These actions are common for all characters
+These actions are common for all characters:
+
 	- All movements have priority, meaning that characters will always move first before an attack can land
-	- Jump : moves the character up by 2 X-positions, then back to the original position, taking 4 ticks in total
-	- Jump forward : moves the character up by 1 X-position and 1 Y-position, moving in an arc and landing 3 X-positions forward on the ground, taking 3 ticks total
+	- Jump : moves the character up by 1 Y-position, then back to the original position, taking 3 ticks in total. _--_
+	- Jump forward : moves the character up by 1 Y-position and forward 2 X-positions, moving in an arc and landing 3 X-positions forward on the ground, taking 3 ticks total
 	- Jump backwards: similar to jump forward, but backwards
 	- Move forward/back : moves character forward or back by 1 X-Position, takes 1 tick
  
@@ -165,7 +166,6 @@ There are 4 parameters available for the player to use.
 
 # Character information functions:
 ```
-    player.get_hp()
 def get_pos(self)  - Character position in (x,y) form
 def get_proj_pos(proj) - get projectile’s pos in (x,y) form
 def get_hp(self) - Character HP
@@ -276,6 +276,16 @@ You can always block or jump away from attacks
 
 ## Abilities
 Moves to be selected by players - Players can select 1 primary and 1 secondary ability
+### All Abilities:
+#### PRIMARY
+* Skill Selection - Used to set your PRIMARY_SKILL / SECONDARY_SKILL
+* Skill Output - The output of your skill in the json files
+
+
+| Skill Name | Skill Selection | Skill Output |
+|--|--|--|
+|Teleport| TeleportSkill | "teleport" |
+|Super Saiyan | SuperSaiyanSkill | 
 
 ### Key terms:
 | Terms           | Description                |
