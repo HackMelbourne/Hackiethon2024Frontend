@@ -55,7 +55,7 @@ These actions are common for all characters
 	- Jump forward : moves the character up by 1 X-position and 1 Y-position, moving in an arc and landing 3 X-positions forward on the ground, taking 3 ticks total
 	- Jump backwards: similar to jump forward, but backwards
 	- Move forward/back : moves character forward or back by 1 X-Position, takes 1 tick
- 
+
 #### Constants defined in code
  ```
 JUMP = ("move", (0,1))
@@ -85,29 +85,31 @@ stun: int
 ```
 Startup: 0
 Cooldown: 1
-Damage: 1
-Horizontal Range: 10
+Damage: 3
+Horizontal Range: 1
 Vertical Range: 0
-Blockable: False
-Knockback: 2
-Stun: 2
+Blockable: True
+Knockback: 0
+Stun: 0
+Recovery: 0
 
-0, 1, 5, 1, 0, True, 0, 1
+0, 1, 3, 1, 0, True, 0, 0, 0
 ```
 
 
 #### Heavy attack - Short range (1 X-pos) attack that does medium damage with some knockback and stun
 ```
 Startup: 0
-Cooldown: 1
-Damage: 1
-Horizontal Range: 10
+Cooldown:3
+Damage: 5
+Horizontal Range: 1
 Vertical Range: 0
-Blockable: False
-Knockback: 2
+Blockable: True
+Knockback: 1
 Stun: 2
+Recovery: 1
 
-1, 4, 10, 1, 0, True, 2, 2
+0, 3, 5, 1, 0, True, 1, 2, 1
 ```
 
 > [!TIP]
@@ -137,7 +139,7 @@ return BLOCK
 ```
 
 ### Parry
-A parry occurs when a character starts blocking on the same tick they would be hit by an attack.
+A parry occurs when a character starts blocking on the same tick they would be hit by an attack (does not include projectiles).
 A successful parry by the character stuns the enemy for a short period of time.
 
 
@@ -155,31 +157,32 @@ There are 4 parameters available for the player to use.
 
 
 # Character information functions:
-
+These functions can be accessed from ScriptingHelp/usefulFunctions.py
 |Function | Description|
 |---------|------------|
-|def get_pos(self)  | Character position in (x,y) form
-|def get_proj_pos(proj) | get projectile’s pos in (x,y) form
-|def get_hp(self) | Character HP
-|def get_blocking(self) | check Blocking, if blocking, return shield HP
-|def primary_on_cooldown(player) | Check Primary skill cooldown
-|def secondary_on_cd(self) | Check Secondary skill cooldown
-|def heavy_on_cd(self) | Check heavy attack cooldown
-|def primary_range(self) | Primary skill range
-|def secondary_range(self) | Secondary skill range
-|def get_last_move(self) | last move
-|def get_past_move(self, turns) | get nth move
-|def get_stun(self) | check character stun
-|def get_recovery(self) | Current recovery status
-|def skill_cancellable(self) | check if current skill can be cancelled
+|def get_hp(player)			Gets player HP
+|def get_distance(player, enemy)	Gets the distance in x-coord between player and enemy
+|def get_pos(player)			Gets position (x,y) of player
+|def get_last_move(player)		Gets the most recent move from player		
+|def get_stun_duration(player)		Gets the current stun duration for a player
+|def get_block_status(player)		If the player is currently blocking, get the current shield HP, else return 0
+|def get_proj_pos(proj)			Gets the position (x,y) of a projectile
+|def primary_on_cooldown(player)	Checks if the player's primary skill is on cooldown
+|def secondary_on_cooldown(player)	Checks if the player's secondary skill is on cooldown
+|def heavy_on_cooldown(player)		Checks if the player's heavy attack is on cooldown
+|def prim_range(player)			Gets the range of a player's primary skill, if it is a damaging skill, else return 0
+|def seco_range(player)			Gets the range of a player's secondary skill, if it is a projectile skill, else return 0
+|def get_past_move(player, turns)	Gets the player's past move {turns} turns ago
+|def get_recovery(player)		Gets the player's current recovery duration
+|def skill_cancellable(player)		Checks if the player can cancel their current skill
+|def get_primary_skill(player)		Gets the name of the player's primary skill
+|def get_secondary_skill(player)	Gets the name of the player's secondary skill
+|def get_projectile_type(proj)		Gets the name of the projectile
+|def get_primary_cooldown(player)	Gets the cooldown duration of a player's primary skill
+|def get_secondary_cooldown(player)	Gets the cooldown duration of a player's primary skill
 
 >[!NOTE]
-> Call the funtion like this: player.get_pos()
-
-
-
-
-
+> Call the funtion like this: get_pos(player) or get_pos(enemy)
 
 
 
@@ -261,7 +264,7 @@ Non-damaging actions, such as movement, blocking and non-damaging skills, take e
 Then actions or skills that do damage, including projectiles, take effect afterwards
 Then finally, all currently existing projectiles move one step along their paths.
 In other words:
-Movement/block -> buffing skills -> attack -> damage Skill
+Movement/block/buffing skills -> attacks/damage skills -> projectile movement
 You can always block or jump away from attacks 
 
 
@@ -272,15 +275,15 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 ### Key terms:
 | Terms           | Description                |
 |-----------------|----------------------------|
-|Startup 	  |The number of startup frames|
-|Cooldown 	  |Number of cooldown frames|
+|Startup 	  |The number of startup ticks|
+|Cooldown 	  |Number of cooldown ticks|
 |Damage 	  |Damage dealt|
 |Horizontal Range |How many xcoord the ability will affect|
 |Vertical Range   |How many ycoord the ability will affect|
 |Blockable 	  |Boolean of whether ability can be blocked|
-|Knockback 	  |Horizontal distance enemy is moved upon being hit|
-|Stun 	  	  |How many stun frames enemy is stunned for upon being hit by ability|
-|Travel Range 	  |Range a projectile can travel before it disappears|
+|Knockback 	  |Horizontal distance enemy is moved after being hit|
+|Stun 	  	  |How many stun ticks enemy is stunned for upon being hit by ability|
+|Travel Range 	  |Range a projectile can travel before it disappears or does its unique trait|
 
 
 
