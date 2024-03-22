@@ -64,9 +64,10 @@ The time limit is 60 seconds with each player having 120 ticks per game
 
 ### Movements
 These actions are common for all characters
+
 	- All movements have priority, meaning that characters will always move first before an attack can land
-	- Jump : moves the character up by 2 X-positions, then back to the original position, taking 4 ticks in total
-	- Jump forward : moves the character up by 1 X-position and 1 Y-position, moving in an arc and landing 3 X-positions forward on the ground, taking 3 ticks total
+	- Jump : moves the character up by 1 Y-position, then back to the original position, taking 3 ticks in total
+	- Jump forward : moves the character up by 2 X-positions and 1 Y-position, moving in an arc and landing 3 X-positions forward on the ground, taking 3 ticks total
 	- Jump backwards: similar to jump forward, but backwards
 	- Move forward/back : moves character forward or back by 1 X-Position, takes 1 tick
 
