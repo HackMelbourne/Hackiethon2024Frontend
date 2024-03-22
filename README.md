@@ -1,5 +1,6 @@
-# Hackiethon_2024_participant
-The codebase for hackiethon 2024
+# Hackiethon 2024 Participant Guide
+The Codebase and documentation for Hackiethon 2024 \
+Backend repo: https://github.com/HackMelbourne/Hackiethon2024Backend
 
 # TLDR - Make a bot in 3 minutes:
 1. Go to Submissions and create a new bot
@@ -18,7 +19,9 @@ The codebase for hackiethon 2024
 
 
 ### Setup Frontend (MacOS):
-	- Download folder
+Video [Here](https://www.youtube.com/watch?v=hIx1eBsu5VE) 
+
+	- Clone repo
 	- Open XCode Project (Update XCode if necessary)
 	- In Resources/Data/StreamingAssets/Round_1, update the p1.json, p2.json and round.json files
 	- Run game
