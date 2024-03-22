@@ -308,6 +308,8 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 
 ## Primary abilities
 #### There are 2 types of primary abilities - “non-damaging” and “damaging”.
+>[!NOTE]
+>get_primary_skill() and get_secondary_skill returns the skill name, e.g "hadoken"
 
 ### Non-damaging abilities:
 
@@ -326,6 +328,7 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 |Knockback| N/A|
 |Stun| N/A|
 |Recovery| 0|
+|Skill name| "teleport"|
 
 
 
@@ -341,6 +344,7 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 |Knockback | N/A|
 |Stun | N/A|
 |Recovery| 0|
+|Skill name| "meditate"|
 
 
 ### Damaging abilities
@@ -357,6 +361,7 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 |Knockback| 1|
 |Stun| 0|
 |Recovery| 0|
+|Skill name| "dash_attack"|
 
 |Skill | Uppercut|
 |------|--------|
@@ -370,6 +375,7 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 |Knockback| 2|
 |Stun| 2|
 |Recovery| 0|
+|Skill name| "uppercut"|
 
 
 |Skill | One Punch|
@@ -384,6 +390,7 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 |Knockback| 4|
 |Stun| 3|
 |Recovery| 2|
+|Skill name| "onepunch"|
 
 
 
@@ -403,6 +410,7 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 |Blockable| True|
 |Knockback| 2|
 |Stun| 2|
+|Skill name| "hadoken"|
 
 
 
@@ -417,6 +425,7 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 |Blockable| True|
 |Knockback| 2|
 |Stun| 2|
+|Skill name| "boomerang"|
 
 
 |Skill | Grenade|
@@ -433,6 +442,7 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 |Knockback| 3|
 |Stun| 3|
 |Time-to-live| 3|
+|Skill name| "grenade"|
 
 
 
@@ -451,6 +461,7 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 |Knockback| 0|
 |Stun| 3|
 |Time-to-live| 10|
+|Skill name| "beartrap"|
 
 |Skill         | Super Saiyan |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
@@ -466,8 +477,9 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 |Knockback| N/A|
 |Stun| N/A|
 |Recovery| 0|
+|Skill name| "super_saiyan"|
 
-|Skill		| Super Armour|
+|Skill		| Super Armor|
 |---------------|-------------------|
 |Description    |Player gains armour which makes players take less damage and makes player invulnerable to stun and knockback.|
 |Duration| 20 ticks|
@@ -480,6 +492,7 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 |Knockback| N/A|
 |Stun| N/A|
 |Recovery| 0|
+|Skill name| "super_armor"
 
 |Skill | Super Jump|
 |------|-----------|
@@ -494,6 +507,7 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 |Knockback | N/A|
 |Stun | N/A|
 |Recovery| 0|
+|Skill name| "jump_boost"
 
 
 
