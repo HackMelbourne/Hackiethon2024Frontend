@@ -17,7 +17,6 @@ Backend repo: https://github.com/HackMelbourne/Hackiethon2024Backend
    <img src="https://i.imgur.com/0HkHHtY.png" alt="Edit Bot Start" width="400"/>
    <img src="https://i.imgur.com/bb7Hdqp.png" alt="Edit Bot Finish" width="400"/>
 
-
 ### Setup Frontend (MacOS):
 Video [Here](https://www.youtube.com/watch?v=hIx1eBsu5VE) 
 
@@ -32,6 +31,29 @@ Video [Here](https://www.youtube.com/watch?v=hIx1eBsu5VE)
  
 ### Setup Backend:
 Video [Here](https://www.youtube.com/watch?v=0EywhHUsM4I)
+
+## Visualizing your code
+Ensure that bot codes work\
+Set PATH1 and PATH2 in GameManager.py to the filenames of your bots (excluding .py)\
+Run `python Game/GameManager.py` OR `python3 Game/GameManager.py` (depending on your python version)
+
+There should be json files outputted into "Hackiethon2024Backend/jsonfiles"
+
+Move the json files to:\
+Windows: “Hackieton Windows/Hackethon_FrontEnd/Resources/Data/StreamingAssets/Round_1”\
+Mac (Silicon/Intel): "Hackiethon Mac Intel/Hackethon_FrontEnd/Resources/Data/StreamingAssets/Round_1"
+
+Ensure that this is done before running the front end
+
+### Running the hackethon_frontend visuals:
+
+For Mac users, build the project using Xcode to visualise\
+Mac Intel: "Hackiethon Mac Intel/Hackiethon Mac Intel.xcodeproj"\
+Mac Silicon: "Hackiethon Mac Sillicon/Hackiethon Mac Sillicon.xcodeproj"
+
+For windows users, run "Hackiethon Windows/Hackethon_FrontEnd.exe".
+
+Use alt-tab and close the window to stop running the executable.
 
 # Introduction:
 ### The tournament will follow a bracket-style format where teams control characters using ai who will engage in one-on-one battles.
@@ -511,31 +533,6 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 |Stun | N/A|
 |Recovery| 0|
 |Skill name| "jump_boost"
-
-
-
-## Visualizing your code
-Ensure that bot codes work
-Set PATH1 and PATH2 in GameManager.py to the filenames of your bots (excluding .py)
-Run GameManager.py
-
-There should be json files outputted into "Hackiethon2024Backend/jsonfiles"
-
-Move the json files to:
-Windows: “Hackieton Windows/Hackethon_FrontEnd/Resources/Data/StreamingAssets/Round_1”
-Mac (Silicon/Intel): "Hackiethon Mac Intel/Hackethon_FrontEnd/Resources/Data/StreamingAssets/Round_1"
-
-Ensure that this is done before running the front end
-
-### Running the hackethon_frontend visuals:
-
-For Mac users, ensure that the project has been built first using Xcode
-Mac Intel: "Hackiethon Mac Intel/Hackiethon Mac Intel.xcodeproj"
-Mac Silicon: "Hackiethon Mac Sillicon/Hackiethon Mac Sillicon.xcodeproj"
-
-For windows users, run "Hackieton Windows/Hackethon_FrontEnd.exe"
-
-Use alt-tab and close the window to stop running the executable
 
 
 ## Locked skills
