@@ -515,7 +515,7 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 
 
 
-###Visualizing your code
+### Visualizing your code
 Ensure that bot codes work
 Set PATH1 and PATH2 in GameManager.py to the filenames of your bots (excluding .py)
 Run GameManager.py
@@ -527,7 +527,8 @@ Windows: “Hackieton Windows/Hackethon_FrontEnd/Resources/Data/StreamingAssets/
 Mac (Silicon/Intel): "Hackiethon Mac Intel/Hackethon_FrontEnd/Resources/Data/StreamingAssets/Round_1"
 
 Ensure that this is done before running the front end
-#Running the hackethon_frontend:
+
+# Running the hackethon_frontend visuals:
 
 For Mac users, ensure that the project has been built first using Xcode
 Mac Intel: "Hackiethon Mac Intel/Hackiethon Mac Intel.xcodeproj"
