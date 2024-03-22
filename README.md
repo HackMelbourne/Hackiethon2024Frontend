@@ -28,7 +28,7 @@ Video [Here](https://www.youtube.com/watch?v=hIx1eBsu5VE)
 
 ### Setup Frontend (Windows):
 	- In Resources/Data/StreamingAssets/Round_1, update the p1.json, p2.json and round.json files
-	- Run the .exe file
+	- Run the .exe file ("Hackieton Windows/Hackethon_FrontEnd.exe")
  
 ### Setup Backend:
 Video [Here](https://www.youtube.com/watch?v=0EywhHUsM4I)
