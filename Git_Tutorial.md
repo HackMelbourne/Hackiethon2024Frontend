@@ -97,4 +97,3 @@ If you want to check the a list of the commits that have been used, you can use:
 ```
 git log
 ```
-
