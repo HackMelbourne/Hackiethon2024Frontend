@@ -513,9 +513,7 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 
 
 
-
-
-### Visualizing your code
+## Visualizing your code
 Ensure that bot codes work
 Set PATH1 and PATH2 in GameManager.py to the filenames of your bots (excluding .py)
 Run GameManager.py
@@ -528,7 +526,7 @@ Mac (Silicon/Intel): "Hackiethon Mac Intel/Hackethon_FrontEnd/Resources/Data/Str
 
 Ensure that this is done before running the front end
 
-# Running the hackethon_frontend visuals:
+### Running the hackethon_frontend visuals:
 
 For Mac users, ensure that the project has been built first using Xcode
 Mac Intel: "Hackiethon Mac Intel/Hackiethon Mac Intel.xcodeproj"
@@ -537,6 +535,14 @@ Mac Silicon: "Hackiethon Mac Sillicon/Hackiethon Mac Sillicon.xcodeproj"
 For windows users, run "Hackieton Windows/Hackethon_FrontEnd.exe"
 
 Use alt-tab and close the window to stop running the executable
+
+
+## Locked skills
+Certain skills will be locked during the tournament bracket on 24 Mar 2024 (Sunday). You can only gain access to these skills 
+through winning mini-games on 23 Mar 2024 (Saturday), and we will be making sure only people who have access to them can use them.
+These skills are: One Punch, Super Armor and Boomerang.
+
+
 
 
 
