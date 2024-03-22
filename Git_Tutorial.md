@@ -49,7 +49,7 @@ Great, you have created a new branch, however you need to switch to that branch 
 git checkout new_branchname
 ```
 
-## Cloning a repositoru
+## Cloning a repository
 Cloning creates a local copy of a remote repository on your machine. 
 This allows you to work on the project locally, make changes, and contribute back to the project by pushing your changes to the remote repository.
 Ensure that you are in the working directory that you want to clone the online repository to. 
