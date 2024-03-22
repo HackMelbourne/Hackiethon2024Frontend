@@ -29,7 +29,9 @@ Video [Here](https://www.youtube.com/watch?v=hIx1eBsu5VE)
 ### Setup Frontend (Windows):
 	- In Resources/Data/StreamingAssets/Round_1, update the p1.json, p2.json and round.json files
 	- Run the .exe file
-
+ 
+### Setup Backend:
+Video [Here](https://www.youtube.com/watch?v=0EywhHUsM4I)
 
 # Introduction:
 ### The tournament will follow a bracket-style format where teams control characters using ai who will engage in one-on-one battles.
