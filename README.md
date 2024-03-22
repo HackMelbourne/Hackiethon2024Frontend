@@ -148,6 +148,9 @@ Recovery: 1
 
 0, 3, 5, 1, 0, True, 1, 2, 1
 ```
+>[!NOTE]
+>Cooldowns start counting down at the end of the tick, so a movement with a cooldown of 1 can be used rapid succession, while moves with a cooldown of 2 take 1 extra tick before they can be used
+>Hint: Use the get cooldown functions in the doc to check cooldowns
 
 > [!TIP]
 > Combo attack  - If the previous two moves were light attacks, the next light or heavy attack will deal increased damage, knockback and stun
