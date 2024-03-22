@@ -1,4 +1,4 @@
-# Git / Github Tutorial 
+# Git Tutorial 
 
 Note that this assumes you have python and a code editor (Eg. vscode downloaded), and a github account. 
 
