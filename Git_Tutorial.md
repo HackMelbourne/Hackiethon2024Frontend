@@ -12,5 +12,6 @@ After installing Git onto your computer, you will need to configure it with your
 git config --global user.name "Your Name"
 git config --global user.email "your_email@example.com"
 ```
+Replace "Your Name" with your name and "your_email@example.com" with your email address.
 
-
+## Initializing a Git Repository
