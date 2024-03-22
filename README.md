@@ -406,7 +406,7 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 |Skill name| "uppercut"|
 
 
-|Skill | One Punch|
+|Skill | One Punch (LOCKED UNLESS YOU WIN MINIGAME) |
 |------|----------|
 |Description| Slow, significant damage attack that breaks shields with great knockback and stun|
 |Startup| 1|
@@ -442,7 +442,7 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 
 
 
-|Skill | Boomerang|
+|Skill | Boomerang (LOCKED UNLESS YOU WIN MINIGAME)|
 |------|----------|
 |Description|Travels forwards, then back towards the character who casted it, dealing medium damage to the enemy upon being hit|
 |Startup| 0|
@@ -507,7 +507,7 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 |Recovery| 0|
 |Skill name| "super_saiyan"|
 
-|Skill		| Super Armor|
+|Skill		| Super Armor (LOCKED UNLESS YOU WIN MINIGAME)|
 |---------------|-------------------|
 |Description    |Player gains armour which makes players take less damage and makes player invulnerable to stun and knockback.|
 |Duration| 20 ticks|
@@ -522,7 +522,7 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 |Recovery| 0|
 |Skill name| "super_armor"
 
-|Skill | Super Jump|
+|Skill | Super Jump |
 |------|-----------|
 |Description | Allows Player to jump higher|
 |Duration| 20 ticks|
