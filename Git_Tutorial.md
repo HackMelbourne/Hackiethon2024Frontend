@@ -49,6 +49,43 @@ Great, you have created a new branch, however you need to switch to that branch 
 git checkout new_branchname
 ```
 
+## Cloning a repositoru
+Cloning creates a local copy of a remote repository on your machine. 
+This allows you to work on the project locally, make changes, and contribute back to the project by pushing your changes to the remote repository.
+Ensure that you are in the working directory that you want to clone the online repository to. 
+
+To get the repository_url, 
+
+1. Navigate to the repository you want to clone 
+2. Click the code button...
+3. Copy the URL for the repository.
+
+and then you have it, now to clone a repository you can use: 
+```
+git clone repository_url
+```
+
+## Forking a Repository 
+Forking involves creating a copy of a repository on your GitHub account. This allows you to freely experiment with changes without affecting the original repository. 
+You will need to fork a repository for this project... 
+
+Here's how you can fork a repository:
+1. Visit the Repository: Go to the repository you want to fork on GitHub.
+2. Fork: Click on the "Fork" button at the top right corner of the repository page. This creates a copy of the repository under your GitHub account.
+
+Great you have forked the repository onto ur account, now you need to clone it so you can make changes locally.
+To do so,
+1. Navigate to the forked repository on your github account,
+2. Click the code button...
+3. Copy the URL for the repository.
+4. Go to the git bash
+5. Type git clone, and then paste the URL you copied earlier. It will look like this, with your GitHub username instead of YOUR-USERNAME
+
+Eg. 
+```
+git clone https://github.com/YOUR-USERNAME/repository_name
+```
+
 ## Pushing changes to a Remote repository
 So far you have been working locally and haven't made your changes accessible to others for collaboration. To make your changes available, you need to push them to a remote repository. 
 It's important to push your changes regularly to keep your remote repository up-to-date with your local changes.
@@ -65,25 +102,6 @@ git push -u origin branchname
 ```
 Where branchname is the branch you want to push to. 
 and origin is the name of remote repository name. 
-
-## Cloning a repositoru
-Cloning creates a local copy of a remote repository on your machine. 
-This allows you to work on the project locally, make changes, and contribute back to the project by pushing your changes to the remote repository.
-Ensure that you are in the working directory that you want to clone the online repository to. 
-
-To clone a repository you can use: 
-```
-git clone repository_url
-```
-
-## Forking a Repository 
-Forking involves creating a copy of a repository on your GitHub account. This allows you to freely experiment with changes without affecting the original repository. 
-You will need to fork a repository for this project... 
-
-Here's how you can fork a repository:
-1. Visit the Repository: Go to the repository you want to fork on GitHub.
-2. Fork: Click on the "Fork" button at the top right corner of the repository page. This creates a copy of the repository under your GitHub account.
-
 
 
 ## Checking Status / logs in Git 
