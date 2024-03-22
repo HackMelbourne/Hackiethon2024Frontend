@@ -390,6 +390,7 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 |Stun| 0|
 |Recovery| 0|
 |Skill name| "dash_attack"|
+|Unique trait| Dash attack can dash through players and projectiles, but can be counted by the other player also using a dash attack at the same time|
 
 |Skill | Uppercut|
 |------|--------|
