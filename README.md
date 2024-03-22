@@ -515,10 +515,28 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 
 
 
-Visualizing your code
-Ensure that player.py and player2.py has the correct code
+###Visualizing your code
+Ensure that bot codes work
+Set PATH1 and PATH2 in GameManager.py to the filenames of your bots (excluding .py)
 Run GameManager.py
-There should be a json file outputted 
-Move the json files to “Hackethon_FrontEnd_Data/Json_Files”
-Run the hackethon_frontend
+
+There should be json files outputted into "Hackiethon2024Backend/jsonfiles"
+
+Move the json files to:
+Windows: “Hackieton Windows/Hackethon_FrontEnd/Resources/Data/StreamingAssets/Round_1”
+Mac (Silicon/Intel): "Hackiethon Mac Intel/Hackethon_FrontEnd/Resources/Data/StreamingAssets/Round_1"
+
+Ensure that this is done before running the front end
+#Running the hackethon_frontend:
+
+For Mac users, ensure that the project has been built first using Xcode
+Mac Intel: "Hackiethon Mac Intel/Hackiethon Mac Intel.xcodeproj"
+Mac Silicon: "Hackiethon Mac Sillicon/Hackiethon Mac Sillicon.xcodeproj"
+
+For windows users, run "Hackieton Windows/Hackethon_FrontEnd.exe"
+
+Use alt-tab and close the window to stop running the executable
+
+
+
 
