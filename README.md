@@ -65,7 +65,7 @@ These actions are common for all characters:
 	- Jump forward : moves the character up by 1 Y-position and forward 2 X-positions, moving in an arc and landing 3 X-positions forward on the ground, taking 3 ticks total
 	- Jump backwards: similar to jump forward, but backwards
 	- Move forward/back : moves character forward or back by 1 X-Position, takes 1 tick
- 
+
 #### Constants defined in code
  ```
 JUMP = ("move", (0,1))
@@ -95,29 +95,31 @@ stun: int
 ```
 Startup: 0
 Cooldown: 1
-Damage: 1
-Horizontal Range: 10
+Damage: 3
+Horizontal Range: 1
 Vertical Range: 0
-Blockable: False
-Knockback: 2
-Stun: 2
+Blockable: True
+Knockback: 0
+Stun: 0
+Recovery: 0
 
-0, 1, 5, 1, 0, True, 0, 1
+0, 1, 3, 1, 0, True, 0, 0, 0
 ```
 
 
 #### Heavy attack - Short range (1 X-pos) attack that does medium damage with some knockback and stun
 ```
 Startup: 0
-Cooldown: 1
-Damage: 1
-Horizontal Range: 10
+Cooldown:3
+Damage: 5
+Horizontal Range: 1
 Vertical Range: 0
-Blockable: False
-Knockback: 2
+Blockable: True
+Knockback: 1
 Stun: 2
+Recovery: 1
 
-1, 4, 10, 1, 0, True, 2, 2
+0, 3, 5, 1, 0, True, 1, 2, 1
 ```
 
 > [!TIP]
@@ -147,7 +149,7 @@ return BLOCK
 ```
 
 ### Parry
-A parry occurs when a character starts blocking on the same tick they would be hit by an attack.
+A parry occurs when a character starts blocking on the same tick they would be hit by an attack (does not include projectiles).
 A successful parry by the character stuns the enemy for a short period of time.
 
 
@@ -165,29 +167,35 @@ There are 4 parameters available for the player to use.
 
 
 # Character information functions:
-```
-def get_pos(self)  - Character position in (x,y) form
-def get_proj_pos(proj) - get projectile’s pos in (x,y) form
-def get_hp(self) - Character HP
-def get_blocking(self) - check Blocking, if blocking, return shield HP
-def primary_on_cooldown(player) - Check Primary skill cooldown
-def secondary_on_cd(self) - Check Secondary skill cooldown
-def heavy_on_cd(self) - Check heavy attack cooldown
-def primary_range(self) - Primary skill range
-def secondary_range(self) - Secondary skill range
-def get_last_move(self) - last move
-def get_past_move(self, turns) -  get nth move
-def get_stun(self) - check character stun
-def get_recovery(self) - Current recovery status
-def skill_cancellable(self) - check if current skill can be cancelled
 
-```
+These functions can be accessed from ScriptingHelp/usefulFunctions.py
+|Function | Description|
+|---------|------------|
+|def get_hp(player)			|Gets player HP
+|def get_distance(player, enemy)	|Gets the distance in x-coord between player and enemy
+|def get_pos(player)			|Gets position (x,y) of player
+|def get_last_move(player)		|Gets the most recent move from player		
+|def get_stun_duration(player)		|Gets the current stun duration for a player
+|def get_block_status(player)		|If the player is currently blocking, get the current shield HP, else return 0
+|def get_proj_pos(proj)			|Gets the position (x,y) of a projectile
+|def primary_on_cooldown(player)	|Checks if the player's primary skill is on cooldown
+|def secondary_on_cooldown(player)	|Checks if the player's secondary skill is on cooldown
+|def heavy_on_cooldown(player)		|Checks if the player's heavy attack is on cooldown
+|def prim_range(player)			|Gets the range of a player's primary skill, if it is a damaging skill, else return 0
+|def seco_range(player)			|Gets the range of a player's secondary skill, if it is a projectile skill, else return 0
+|def get_past_move(player, turns)	|Gets the player's past move {turns} turns ago
+|def get_recovery(player)		|Gets the player's current recovery duration
+|def skill_cancellable(player)		|Checks if the player can cancel their current skill
+|def get_primary_skill(player)		|Gets the name of the player's primary skill
+|def get_secondary_skill(player)	|Gets the name of the player's secondary skill
+|def get_projectile_type(proj)		|Gets the name of the projectile
+|def get_primary_cooldown(player)	|Gets the cooldown duration of a player's primary skill
+|def get_secondary_cooldown(player)	|Gets the cooldown duration of a player's primary skill
 
-
-
-
-
-
+>[!NOTE]
+> Call the function like this: get_hp(player) or get_hp(enemy)
+>Example: if get_hp(enemy) < 30:
+>		return FORWARD
 
 
 
@@ -269,7 +277,7 @@ Non-damaging actions, such as movement, blocking and non-damaging skills, take e
 Then actions or skills that do damage, including projectiles, take effect afterwards
 Then finally, all currently existing projectiles move one step along their paths.
 In other words:
-Movement/block -> buffing skills -> attack -> damage Skill
+Movement/block/buffing skills -> attacks/damage skills -> projectile movement
 You can always block or jump away from attacks 
 
 
@@ -290,15 +298,15 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 ### Key terms:
 | Terms           | Description                |
 |-----------------|----------------------------|
-|Startup 	  |The number of startup frames|
-|Cooldown 	  |Number of cooldown frames|
+|Startup 	  |The number of startup ticks|
+|Cooldown 	  |Number of cooldown ticks|
 |Damage 	  |Damage dealt|
 |Horizontal Range |How many xcoord the ability will affect|
 |Vertical Range   |How many ycoord the ability will affect|
 |Blockable 	  |Boolean of whether ability can be blocked|
-|Knockback 	  |Horizontal distance enemy is moved upon being hit|
-|Stun 	  	  |How many stun frames enemy is stunned for upon being hit by ability|
-|Travel Range 	  |Range a projectile can travel before it disappears|
+|Knockback 	  |Horizontal distance enemy is moved after being hit|
+|Stun 	  	  |How many stun ticks enemy is stunned for upon being hit by ability|
+|Travel Range 	  |Range a projectile can travel before it disappears or does its unique trait|
 
 
 
@@ -315,64 +323,24 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 
 |Skill         | Teleport |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-|Description       | Instantly moves the character a certain distance (5 units) away from the enemy|
+|Description       | Instantly moves the character a certain distance (6 units) away from the enemy|
 |Startup | 0|														    
-|Cooldown           | 10|
-|Damage | 10|
+|Cooldown           | 6|
 |Horizontal Range| 10|
 |Vertical Range| 0|
-|Blockable| False|
-|Knockback| 2|
-|Stun| 2|
-
-
-
-|Skill         | Super Saiyan |
-|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-|Description       | Increases the speed of the character, make their attacks deal more damage but slows them down after the buff ends for a certain period of time|
-|Super Saiyan State | Double attack strength 															    |
-|Duration           | 5 ticks																	    |
-|Slowed-down state | Half attack strength, All attacks now have 1 tick startup |
-|Duration| 5 ticks|
-|Startup| 0|
-|Cooldown| 15|
 |Damage| N/A|
 |Horizontal Range| N/A|
 |Vertical Range| N/A|
 |Blockable| N/A|
 |Knockback| N/A|
 |Stun| N/A|
+|Recovery| 0|
 
-
-|Skill		| Super Armour|
-|---------------|-------------------|
-|Description    |Player gains armour which makes players take less damage and makes player invulnerable to stun.|
-|Startup| 0|
-|Cooldown| 30|
-|Damage| N/A|
-|Horizontal Range| N/A|
-|Vertical Range| N/A|
-|Blockable| N/A|
-|Knockback| N/A|
-|Stun| N/A|
-
-
-|Skill | Super Jump|
-|------|-----------|
-|Description | Allows Player to jump higher|
-|Startup | 0|
-|Cooldown | 30|
-|Damage | N/A|
-|Horizontal Range | N/A|
-|Vertical Range | N/A|
-|Blockable | N/A|
-|Knockback | N/A|
-|Stun | N/A|
 
 
 |Skill | Meditate |
 |------|----------|
-|Description |Heals character for 10 HP.|
+|Description |Heals character for 20 HP.|
 |Startup | 0|
 |Cooldown | 20|
 |Damage | N/A|
@@ -381,7 +349,7 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 |Blockable | N/A|
 |Knockback | N/A|
 |Stun | N/A|
-
+|Recovery| 0|
 
 
 ### Damaging abilities
@@ -389,34 +357,34 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 |Skill| Dash Attack|
 |------|-----------|
 |Description|Instantly moves the character a certain distance in the direction towards the enemy, dealing medium damage if the dash hits the enemy|
-|Startup| 0|
-|Cooldown| 10|
-|Damage| 10|
-|Horizontal Range| 4|
+|Startup| 1|
+|Cooldown| 7|
+|Damage| 5|
+|Horizontal Range| 5|
 |Vertical Range| 0|
 |Blockable| False|
-|Knockback| 0|
-|Stun| 2|
-
+|Knockback| 1|
+|Stun| 0|
+|Recovery| 0|
 
 |Skill | Uppercut|
 |------|--------|
 |Description |Medium damage attack that hits airborne enemies|
 |Startup| 0 |
-|Cooldown| 10|
-|Damage| 15|
+|Cooldown| 5|
+|Damage| 7|
 |Horizontal Range| 1|
-|Vertical Range| 2|
+|Vertical Range| 1|
 |Blockable| True|
 |Knockback| 2|
 |Stun| 2|
-
+|Recovery| 0|
 
 
 |Skill | One Punch|
 |------|----------|
-|Description| Slow, heavy damage attack that breaks shields with great knockback and stun|
-|Startup| 0|
+|Description| Slow, significant damage attack that breaks shields with great knockback and stun|
+|Startup| 1|
 |Cooldown| 10|
 |Damage| 20|
 |Horizontal Range| 1|
@@ -424,6 +392,7 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 |Blockable| False|
 |Knockback| 4|
 |Stun| 3|
+|Recovery| 2|
 
 
 
@@ -434,11 +403,11 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 
 |Skill | Hadoken|
 |------|--------|
-|Description| Basic projectile that does damage if it hits an enemy along its path|
+|Description| Basic projectile that does medium damage if it hits an enemy along its path|
 |Startup| 0|
 |Cooldown| 10|
 |Damage| 10|
-|Travel Range| 5|
+|Travel Range| 7|
 |Vertical Range| 0|
 |Blockable| True|
 |Knockback| 2|
@@ -448,10 +417,10 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 
 |Skill | Boomerang|
 |------|----------|
-|Description|Travels forwards, then back towards the character who casted it, dealing weak damage to the enemy upon being hit|
+|Description|Travels forwards, then back towards the character who casted it, dealing medium damage to the enemy upon being hit|
 |Startup| 0|
-|Cooldown| 10|
-|Damage| 5|
+|Cooldown| 14|
+|Damage| 8|
 |Travel Range| 5|
 |Vertical Range| 0|
 |Blockable| True|
@@ -461,14 +430,14 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 
 |Skill | Grenade|
 |------|--------|
-|Description |Initially travels upwards in an arc, exploding and dealing damage at the end of the arc|
+|Description |Initially travels upwards and forwards in an arc, exploding and dealing damage at the end of the arc|
 |Travel path| 3 x-coord and 1 y-coord from cast position|
 |Damage | Explodes after 3 ticks and damages in an 3x3 area|
 |Startup| 0|
-|Cooldown| 10|
-|Damage| 10|
-|Travel Range| 5|
-|Vertical Range| 0|
+|Cooldown| 12|
+|Damage| 20|
+|Travel Range| 3 |
+|Vertical Range| 1|
 |Blockable| False|
 |Knockback| 3|
 |Stun| 3|
@@ -480,17 +449,60 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 
 |Skill | Bear Trap|
 |------|----------|
-|Description| Travels forward a short distance and stays at that position, deals damage to the enemy if they step on it after it travels (2 ticks of travel)|
+|Description| Travels forward a short distance and stays at that position, deals damage to the enemy if they step on it after it travels (1 tick of travel)|
 |Travel range| 2 x-coords from cast position|
 |Startup| 0|
-|Cooldown| 10|
+|Cooldown| 15|
 |Damage| 10|
-|Travel Range| 5|
+|Travel Range| 1|
 |Vertical Range| 0|
 |Blockable| False|
 |Knockback| 0|
 |Stun| 3|
-|Time-to-live| 5|
+|Time-to-live| 10|
+
+|Skill         | Super Saiyan |
+|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+|Description       | Increases the strength of the character for a certain duration|
+|Super Saiyan State | Double attack strength 									
+|Duration| 20 ticks|
+|Startup| 0|
+|Cooldown| 40|
+|Damage| N/A|
+|Horizontal Range| N/A|
+|Vertical Range| N/A|
+|Blockable| N/A|
+|Knockback| N/A|
+|Stun| N/A|
+|Recovery| 0|
+
+|Skill		| Super Armour|
+|---------------|-------------------|
+|Description    |Player gains armour which makes players take less damage and makes player invulnerable to stun and knockback.|
+|Duration| 20 ticks|
+|Startup| 0|
+|Cooldown| 40|
+|Damage| N/A|
+|Horizontal Range| N/A|
+|Vertical Range| N/A|
+|Blockable| N/A|
+|Knockback| N/A|
+|Stun| N/A|
+|Recovery| 0|
+
+|Skill | Super Jump|
+|------|-----------|
+|Description | Allows Player to jump higher|
+|Duration| 20 ticks|
+|Startup | 0|
+|Cooldown | 30|
+|Damage | N/A|
+|Horizontal Range | N/A|
+|Vertical Range | N/A|
+|Blockable | N/A|
+|Knockback | N/A|
+|Stun | N/A|
+|Recovery| 0|
 
 
 
