@@ -2,10 +2,19 @@
 The codebase for hackiethon 2024
 
 # TLDR - Make a bot in 3 minutes:
-	- Go to Submissions and create a new bot
- 	- Get code from template.py and paste it into the new file (in our case newbot.py)
-	- Select PRIMARY_SKILL and SECONDARY_SKILL (see skills in documentation below)
-	- Edit get_move() function
+1. Go to Submissions and create a new bot
+   
+   <img src="https://i.imgur.com/D81CQlT.png" alt="Create Bot" width="200"/>
+2. Get code from template.py and paste it into the new bot file
+
+   <img src="https://i.imgur.com/lY44k4t.png" alt="Copy from template" width="200"/>
+3. Select PRIMARY_SKILL and SECONDARY_SKILL (see skills in documentation below)
+
+   <img src="https://i.imgur.com/Xwhcnms.png" alt="Change Skills" width="300"/>
+4. Edit get_move() function to create your bot
+
+   <img src="https://i.imgur.com/0HkHHtY.png" alt="Edit Bot Start" width="400"/>
+   <img src="https://i.imgur.com/bb7Hdqp.png" alt="Edit Bot Finish" width="400"/>
 
 
 ### Setup Frontend (MacOS):
