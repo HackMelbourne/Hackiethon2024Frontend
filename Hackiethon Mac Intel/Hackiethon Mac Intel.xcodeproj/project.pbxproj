@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13F24BC4AFC42271F069465E /* libMonoPosixHelper.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BB5240B08D538D3A39976C85 /* libMonoPosixHelper.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		24AB4A6DA3102F4CF234BF9F /* libmono-native.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1CEA438EB6B6057F3B751D8D /* libmono-native.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2D7B4320A12B94A288169166 /* libmonobdwgc-2.0.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B3F4159B7AB262E0FD54175 /* libmonobdwgc-2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		750575B4214B38CE004B1B34 /* UnityPlayer.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 750575B3214B38CE004B1B34 /* UnityPlayer.dylib */; };
+		750575B5214B3DF2004B1B34 /* UnityPlayer.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 750575B3214B38CE004B1B34 /* UnityPlayer.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		752CA83E2149E6C400295EFC /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 752CA83D2149E6C400295EFC /* Main.cpp */; };
+		75D2DE1F2175685A0038651C /* unity default resources in Resources */ = {isa = PBXBuildFile; fileRef = 75D2DE1E2175685A0038651C /* unity default resources */; };
+		75E7179121715210002B2479 /* DefaultPreferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75E7178E21715210002B2479 /* DefaultPreferences.plist */; };
+		75E7179221715210002B2479 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 75E7178F21715210002B2479 /* Data */; };
+		75E7179321715210002B2479 /* PlayerIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 75E7179021715210002B2479 /* PlayerIcon.icns */; };
+		971741CC86A47B3AFCD91F81 /* MonoBleedingEdge in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C4D47D9BA897783DFF8E375 /* MonoBleedingEdge */; };
+		C2A7419DAC65B69DCCAA9078 /* lib_burst_generated.bundle in CopyPlugIns */ = {isa = PBXBuildFile; fileRef = 3B454683999AD29E0B435D12 /* lib_burst_generated.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CDD5792C240E027400DEA632 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = CDD5792B240E027400DEA632 /* MainMenu.nib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		750575B6214B3DF2004B1B34 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				750575B5214B3DF2004B1B34 /* UnityPlayer.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		981044A8B9E43DB5F268DA29 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2D7B4320A12B94A288169166 /* libmonobdwgc-2.0.dylib in Embed Frameworks */,
+				13F24BC4AFC42271F069465E /* libMonoPosixHelper.dylib in Embed Frameworks */,
+				24AB4A6DA3102F4CF234BF9F /* libmono-native.dylib in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1B14952974EBCBDCE249169 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents;
+			dstSubfolderSpec = 1;
+			files = (
+				971741CC86A47B3AFCD91F81 /* MonoBleedingEdge in CopyFiles */,
+			);
+			name = CopyFiles;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF294ACDAA5D74304C34FBE1 /* CopyPlugIns */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C2A7419DAC65B69DCCAA9078 /* lib_burst_generated.bundle in CopyPlugIns */,
+			);
+			name = CopyPlugIns;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1CEA438EB6B6057F3B751D8D /* libmono-native.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libmono-native.dylib"; path = "Hackethon_FrontEnd/Frameworks/libmono-native.dylib"; sourceTree = SOURCE_ROOT; };
+		3B454683999AD29E0B435D12 /* lib_burst_generated.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = lib_burst_generated.bundle; path = Hackethon_FrontEnd/Plugins/lib_burst_generated.bundle; sourceTree = SOURCE_ROOT; };
+		4B3F4159B7AB262E0FD54175 /* libmonobdwgc-2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libmonobdwgc-2.0.dylib"; path = "Hackethon_FrontEnd/Frameworks/libmonobdwgc-2.0.dylib"; sourceTree = SOURCE_ROOT; };
+		750575B3214B38CE004B1B34 /* UnityPlayer.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = UnityPlayer.dylib; path = Hackethon_FrontEnd/Frameworks/UnityPlayer.dylib; sourceTree = "<group>"; };
+		752CA8282149E6C100295EFC /* Hackethon_FrontEnd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackethon_FrontEnd.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		752CA83C2149E6C400295EFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		752CA83D2149E6C400295EFC /* Main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
+		75D2DE1E2175685A0038651C /* unity default resources */ = {isa = PBXFileReference; lastKnownFileType = text; name = "unity default resources"; path = "Hackethon_FrontEnd/Resources/unity default resources"; sourceTree = "<group>"; };
+		75E7178E21715210002B2479 /* DefaultPreferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = DefaultPreferences.plist; path = Hackethon_FrontEnd/Resources/DefaultPreferences.plist; sourceTree = "<group>"; };
+		75E7178F21715210002B2479 /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Data; path = Hackethon_FrontEnd/Resources/Data; sourceTree = "<group>"; };
+		75E7179021715210002B2479 /* PlayerIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = PlayerIcon.icns; path = Hackethon_FrontEnd/Resources/PlayerIcon.icns; sourceTree = "<group>"; };
+		8C4D47D9BA897783DFF8E375 /* MonoBleedingEdge */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MonoBleedingEdge; path = Hackethon_FrontEnd/MonoBleedingEdge; sourceTree = SOURCE_ROOT; };
+		BB5240B08D538D3A39976C85 /* libMonoPosixHelper.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libMonoPosixHelper.dylib; path = Hackethon_FrontEnd/Frameworks/libMonoPosixHelper.dylib; sourceTree = SOURCE_ROOT; };
+		CDD5792B240E027400DEA632 /* MainMenu.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = MainMenu.nib; path = Hackethon_FrontEnd/Resources/MainMenu.nib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		752CA8252149E6C100295EFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				750575B4214B38CE004B1B34 /* UnityPlayer.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		599248588904DED9DFEAA0EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B3F4159B7AB262E0FD54175 /* libmonobdwgc-2.0.dylib */,
+				BB5240B08D538D3A39976C85 /* libMonoPosixHelper.dylib */,
+				1CEA438EB6B6057F3B751D8D /* libmono-native.dylib */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		750575B2214B38CE004B1B34 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				750575B3214B38CE004B1B34 /* UnityPlayer.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		752CA81F2149E6C100295EFC = {
+			isa = PBXGroup;
+			children = (
+				75E7179421715230002B2479 /* Resources */,
+				750575B2214B38CE004B1B34 /* Frameworks */,
+				752CA82A2149E6C100295EFC /* Hackethon_FrontEnd */,
+				752CA8292149E6C100295EFC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		752CA8292149E6C100295EFC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				752CA8282149E6C100295EFC /* Hackethon_FrontEnd.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		752CA82A2149E6C100295EFC /* Hackethon_FrontEnd */ = {
+			isa = PBXGroup;
+			children = (
+				752CA83C2149E6C400295EFC /* Info.plist */,
+				752CA83D2149E6C400295EFC /* Main.cpp */,
+				921D47C6A9E42AB0C7EE7A70 /* Plugins */,
+				599248588904DED9DFEAA0EA /* Frameworks */,
+				8C4D47D9BA897783DFF8E375 /* MonoBleedingEdge */,
+			);
+			path = Hackethon_FrontEnd;
+			sourceTree = "<group>";
+		};
+		75E7179421715230002B2479 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CDD5792B240E027400DEA632 /* MainMenu.nib */,
+				75E7178F21715210002B2479 /* Data */,
+				75E7178E21715210002B2479 /* DefaultPreferences.plist */,
+				75E7179021715210002B2479 /* PlayerIcon.icns */,
+				75D2DE1E2175685A0038651C /* unity default resources */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		921D47C6A9E42AB0C7EE7A70 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				3B454683999AD29E0B435D12 /* lib_burst_generated.bundle */,
+			);
+			path = Plugins;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		752CA8272149E6C100295EFC /* Hackethon_FrontEnd */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 752CA8422149E6C400295EFC /* Build configuration list for PBXNativeTarget "Hackethon_FrontEnd" */;
+			buildPhases = (
+				752CA8242149E6C100295EFC /* Sources */,
+				752CA8252149E6C100295EFC /* Frameworks */,
+				752CA8262149E6C100295EFC /* Resources */,
+				750575B6214B3DF2004B1B34 /* Embed Libraries */,
+				CF294ACDAA5D74304C34FBE1 /* CopyPlugIns */,
+				981044A8B9E43DB5F268DA29 /* Embed Frameworks */,
+				C1B14952974EBCBDCE249169 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hackethon_FrontEnd;
+			productName = Hackethon_FrontEnd;
+			productReference = 752CA8282149E6C100295EFC /* Hackethon_FrontEnd.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		752CA8202149E6C100295EFC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Unity Technologies";
+				TargetAttributes = {
+					752CA8272149E6C100295EFC = {
+						CreatedOnToolsVersion = 9.4.1;
+						UnityMainTarget = 1;
+					};
+				};
+			};
+			buildConfigurationList = 752CA8232149E6C100295EFC /* Build configuration list for PBXProject "Unity-iPhone" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 752CA81F2149E6C100295EFC;
+			productRefGroup = 752CA8292149E6C100295EFC;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				752CA8272149E6C100295EFC /* Hackethon_FrontEnd */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		752CA8262149E6C100295EFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75E7179121715210002B2479 /* DefaultPreferences.plist in Resources */,
+				CDD5792C240E027400DEA632 /* MainMenu.nib in Resources */,
+				75E7179221715210002B2479 /* Data in Resources */,
+				75E7179321715210002B2479 /* PlayerIcon.icns in Resources */,
+				75D2DE1F2175685A0038651C /* unity default resources in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		752CA8242149E6C100295EFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				752CA83E2149E6C400295EFC /* Main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		752CA8402149E6C400295EFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		752CA8412149E6C400295EFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		752CA8432149E6C400295EFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Hackethon_FrontEnd/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DefaultCompany.2DProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				UNITY_RUNTIME_VERSION = 2022.3.16f1;
+				UNITY_SCRIPTING_IL2CPP = 0;
+				VALID_ARCHS = x86_64;
+			};
+			name = Debug;
+		};
+		752CA8442149E6C400295EFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Hackethon_FrontEnd/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DefaultCompany.2DProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				UNITY_RUNTIME_VERSION = 2022.3.16f1;
+				UNITY_SCRIPTING_IL2CPP = 0;
+				VALID_ARCHS = x86_64;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		752CA8232149E6C100295EFC /* Build configuration list for PBXProject "Unity-iPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				752CA8402149E6C400295EFC /* Debug */,
+				752CA8412149E6C400295EFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		752CA8422149E6C400295EFC /* Build configuration list for PBXNativeTarget "Hackethon_FrontEnd" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				752CA8432149E6C400295EFC /* Debug */,
+				752CA8442149E6C400295EFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 752CA8202149E6C100295EFC /* Project object */;
+}
