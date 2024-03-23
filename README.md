@@ -347,7 +347,7 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 |Description       | Instantly moves the character a certain distance (6 units) away from the enemy|
 |Startup | 0|														    
 |Cooldown           | 6|
-|Horizontal Range| 10|
+|Horizontal Range| 6|
 |Vertical Range| 0|
 |Damage| N/A|
 |Horizontal Range| N/A|
