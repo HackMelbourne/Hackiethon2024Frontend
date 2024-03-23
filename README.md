@@ -492,6 +492,11 @@ Moves to be selected by players - Players can select 1 primary and 1 secondary a
 |Time-to-live| 10|
 |Skill name| "beartrap"|
 
+Collision Priorities
+Certain projectiles are stronger than and can destroy other projectiles.
+The priorities are Hadoken/Boomerang > Bear Trap > Grenade
+So Hadoken/Boomerang can destroy each other, bear trap and grenade
+
 |Skill         | Super Saiyan |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
 |Description       | Increases the strength of the character for a certain duration|
